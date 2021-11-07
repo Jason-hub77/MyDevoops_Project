@@ -1,0 +1,117 @@
+$ *
+$ **
+$ ***
+$ https://unix.stackexchange.com/questions/233327/is-it-possible-to-clone-only-part-of-a-git-project
+```
+$ aws cloudformation create-stack --stack-name JASON-k8s-proj-206 --template-body file://kubernetes-env-cf.yaml --parameters ParameterKey=KeyPairName,ParameterValue=2078_ofc --capabilities CAPABILITY_IAM
+```
+$ ssh -i Users/canancavlazoglu/.ssh/2078_ofc.pem ubuntu@3.237.33.111
+```
+$ Dockerfile
+
+FROM python:alpine
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
+```
+$ docker login
+```
+$ docker build -t jasonhub77/python_result_server .
+```
+$ docker push jasonhub77/python_result_server
+```
+$ docker build -t jasonhub77/python_web_server .
+```
+$ docker push jasonhub77/python_web_server
+```
+$ docker images
+```
+jasonhub77/python_web_server      latest    d27f9fbe3b30   7 minutes ago    56.9MB
+jasonhub77/python_result_server   latest    677b671b22cd   16 minutes ago   56.8MB
+
+```
+$ echo -n "Q2xhcnVzd2F5XzE=" | base64 --decode 
+```
+Clarusway_1%
+
+$ echo -n "UjEyMzRy" | base64 --decode
+```
+R1234r% 
+
+K8s
+
+1.secret_configmap
+ubuntu@kube-master:~/k8s/secret_configmap$ kubectl apply -f .
+
+$ kubectl get cm
+```
+$ kubectl get secret
+```
+2.mysql
+$ ubuntu@kube-master:~/k8s/mysql$ kubectl apply -f .
+```
+$ kubectl get pv
+```
+$ kubectl get pv -w
+```
+$ kubectl get pvc
+```
+$ kubectl get svc
+```
+$ kubectl get ep mysql-service
+```
+$ kubectl get pod -o wide
+```
+
+3.result_server
+
+$ ubuntu@kube-master:~/k8s/result_server$ kubectl apply -f . 
+```
+$ kubectl get svc
+```
+$ kubectl get ep
+```
+$ kubectl get ep result-service
+```
+$ kubectl get pod -o wide
+```
+
+4.web_server
+$ ubuntu@kube-master:~/k8s/web_server$ kubectl apply -f . 
+```
+$ kubectl get svc
+```
+$ kubectl get ep phonebook-service
+```
+$ kubectl get pod -o wide
+```
+$ kubectl get deploy
+```
+$ 
+```
+$ 
+```
+$ 
+```
+$ 
+```
+$ 
+```
+
+503 git init
+ 504 git remote add origin clarus:clarusway/clarusway-devops-8-21.git
+ 505 git remote -v
+ 506 git config core.sparseCheckout true
+ 507 echo "projects/206-Kubernetes-Microservice-Phonebook/" > .git/info/sparse-checkout
+ 508 cat .git/info/sparse-checkout 
+ 509 clear
+ 510 git pull origin main
+ 511 cat .git/info/sparse-checkout 
+ 512 ls
+ 513 cd projects/
+ 514 ls
+ 515 cd 206-Kubernetes-Microservice-Phonebook/
+ 516 clear
+ 517 history
